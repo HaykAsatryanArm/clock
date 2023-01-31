@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #10101e;
+    font-family: 'Poppins', sans-serif;
+}
+
+.digital:hover {
+    background: #2e94e3;
+    box-shadow: 0 0 60px #2e94e3;
+}
+
+.digital {
+    width: 340px;
+    padding: 15px 10px;
+    border: 3px solid #2e94e3;
+    color: #ffffff;
+    background: #10101e;
+    border-radius: 5px;
+    -webkit-box-reflect: below .5px linear-gradient(transparent, rgba(255, 255, 255, .05));
+    transition: all .3s cubic-bezier(.39,.78,.61,.24);
+    cursor: pointer;
+}
+
+.digital .date {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.digital .time {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time span {
+    margin: 0px 5px;
+}
+
+.time span:last-child {
+    background: #2e94e3;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+.analog:hover {
+    box-shadow: 0 0 60px #2e95e327;
+}
+
+.analog {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(clock.png);
+    background-position: center center;
+    background-size: cover;
+    border: 3px solid #10101e;
+    border-radius: 50%;
+    -webkit-box-reflect: below .5px linear-gradient(transparent, rgba(255, 255, 255, .05));
+    transition: all .3s cubic-bezier(.39,.78,.61,.24);
+    cursor: pointer;
+    display: none;
+}
+
+.analog::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    z-index: 1111;
+    border-radius: 50%;
+}
+
+.analog .hour,
+.analog .min,
+.analog .sec {
+    position: absolute;
+}
+
+.analog .hour .hr,
+.analog .min .mn,
+.analog .sec .sc {
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #EB6260;
+    z-index: 10;
+    border-radius: 6px;
+    top: 40px;
+}
+
+.mn::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #2e94e3;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+    top: 25px;
+}
+
+.sc::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #ffffff;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+    top: 0px;
+}
